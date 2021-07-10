@@ -1,27 +1,34 @@
-let circle = document.getElementsByClassName('redCircle');
-console.log(circle);
-let ctx = circle.getContext('2d');
-console.log(ctx);
-ctx.beginPath();
-ctx.arc(100, 75, 50, 0, 2 * Math.PI);
-ctx.stroke();
+let redDot = document.getElementById('redColor');
+let yellowDot = document.getElementById('yellowColor');
+let greenDot = document.getElementById('greenColor');
 
-setTimeout(changeLights, 3000);
+let rounds = 0;
+let validator = -2;
+function changeLights() {
+  setTimeout(() => {
+    rounds++;
+    validator++;
 
-function changeLights(validator) {
-  if (validator == 1) {
-    console.log('entrou aqui green');
-    validator = 0;
-    return 'green';
-  } else if (validator == 0) {
-    console.log('entrou aqui yellow');
-    validator = -1;
-    return 'yellow';
-  } else {
-    console.log('entrou aqui red');
-    validator = 1;
-    return 'red';
-  }
+    if (rounds < 2000) {
+      changeLights();
+    }
+
+    if (validator === 0) {
+      redDot.style.backgroundColor = 'white';
+      greenDot.style.backgroundColor = 'green';
+      yellowDot.style.backgroundColor = 'white';
+    } else if (validator === 1) {
+      greenDot.style.backgroundColor = 'white';
+      yellowDot.style.backgroundColor = 'yellow';
+      redDot.style.backgroundColor = 'white';
+
+      validator = -2;
+    } else if (validator === -1) {
+      greenDot.style.backgroundColor = 'white';
+      redDot.style.backgroundColor = 'red';
+      yellowDot.style.backgroundColor = 'white';
+    }
+  }, 2000);
 }
 
-console.log(changeLights(1));
+changeLights();
