@@ -114,6 +114,6 @@
   <h2 style="text-decoration: underline;">LICENSE</h2>
   <p>
     This project is MIT licensed - check the
-    <a href="https://github.com/benini17/Gama-1stModule-FinalProject/tree/master" target="_blank">LICENSE.md</a> file for more details.
+    <a href="https://github.com/benini17/GamaBasicJsExercises/blob/main/LICENSE" target="_blank">LICENSE.md</a> file for more details.
   </p>
 </div>
