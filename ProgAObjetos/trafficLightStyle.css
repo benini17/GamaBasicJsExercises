@@ -18,9 +18,34 @@ body {
   top: 100px;
 }
 
-#redLight {
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+}
+
+#div-lights-container {
+  display: flex;
+  flex-direction: column;
+  top: 100px;
+}
+
+#redColor {
+  background-color: white;
   position: absolute;
-  top: 15px;
-  left: 35px;
-  color: red;
+  top: 10px;
+  left: 29px;
+}
+#yellowColor {
+  background-color: white;
+  position: absolute;
+  top: 39px;
+  left: 29px;
+}
+#greenColor {
+  background-color: white;
+  position: absolute;
+  top: 68px;
+  left: 29px;
 }
