@@ -88,6 +88,40 @@ function fizzBuzz(entrada) {
     return entrada;
   }
 }
+console.log('---------------------------------');
+
+// Example 10:
+
+function classDay(day) {
+  switch (day) {
+    case 'Monday':
+      console.log('Class Day');
+      break;
+    case 'Tuesday':
+      console.log('Class Day');
+      break;
+    case 'Wednesday':
+      console.log('Class Day');
+      break;
+    case 'Thursday':
+      console.log('Class Day');
+      break;
+    case 'Friday':
+      console.log('Class Day');
+      break;
+    case 'Saturday':
+      console.log('Saturday');
+      break;
+    case 'Sunday':
+      console.log('Sunday');
+      break;
+
+    default:
+      console.log(`Please enter a day of the week. Example: Monday`);
+      break;
+  }
+}
+classDay('Monday');
 
 console.log('---------------------------------');
 
@@ -219,6 +253,44 @@ console.log('---------------------------------');
 // Example 19:
 //  currency conversor
 
+function currencyConversor(value, currency) {
+  let upperCaseCurrency = `${currency}`.toUpperCase();
+  console.log('Last value update: July 10th 2021');
+
+  if (value != Number) {
+    console.log('The value typped is not a number');
+    return;
+  }
+
+  switch (upperCaseCurrency) {
+    case 'AMERICAN DOLLARS':
+      let americanDollarsExchangeRate = 5.26;
+      let americanDollarsresult = value * americanDollarsExchangeRate;
+
+      console.log(
+        `Your value of ${value} ${currency} equals ${americanDollarsresult} Brazilian Real`
+      );
+      break;
+    case 'HONG KONG DOLLARS':
+      let hongKongDollarsexchangeRate = 0.68;
+      let hongKongDollarsresult = value * hongKongDollarsexchangeRate;
+
+      console.log(
+        `Your value of ${value} ${currency} equals ${hongKongDollarsresult} Brazilian Real`
+      );
+      break;
+    default:
+      console.log(
+        `Please type the correct currency to converter to Brazilian Real. Available currencies:
+        Hong Kong Dollars, American Dollars
+        `
+      );
+      break;
+  }
+}
+console.log('conversor Currency');
+currencyConversor(1, 'hong kong dollars');
+
 console.log('---------------------------------');
 
 // Example 20:
@@ -324,6 +396,23 @@ daysToHours(2);
 
 console.log('---------------------------------');
 
+
+// Example 25:
+// Division
+
+function division(number1, number2) {
+  let result = number1 / number2;
+
+  if (result % 2 == 0) {
+    console.log(`${result} ele é par`);
+  } else {
+    console.log(result);
+  }
+}
+
+division(2, 2);
+
+console.log('---------------------------------');
 // Example 26:
 function loop() {
   for (let i = 1; i <= 100; i++) {
